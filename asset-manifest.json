@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hw21-redux/static/css/main.7ce97817.css",
-    "main.js": "/hw21-redux/static/js/main.8795a349.js",
+    "main.js": "/hw21-redux/static/js/main.8a8b1953.js",
     "static/js/787.156f66ae.chunk.js": "/hw21-redux/static/js/787.156f66ae.chunk.js",
     "static/media/spinner10.svg": "/hw21-redux/static/media/spinner10.f3362b6ead69c21601bc.svg",
     "static/media/bubbles4.svg": "/hw21-redux/static/media/bubbles4.9edf28a2eb9b2eb0661d.svg",
@@ -10,11 +10,11 @@
     "static/media/download.svg": "/hw21-redux/static/media/download.e556a8aeb5c555fa8c26.svg",
     "static/media/checkmark.svg": "/hw21-redux/static/media/checkmark.ad35ae4b7d6c4a9f1b50.svg",
     "main.7ce97817.css.map": "/hw21-redux/static/css/main.7ce97817.css.map",
-    "main.8795a349.js.map": "/hw21-redux/static/js/main.8795a349.js.map",
+    "main.8a8b1953.js.map": "/hw21-redux/static/js/main.8a8b1953.js.map",
     "787.156f66ae.chunk.js.map": "/hw21-redux/static/js/787.156f66ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7ce97817.css",
-    "static/js/main.8795a349.js"
+    "static/js/main.8a8b1953.js"
   ]
 }
