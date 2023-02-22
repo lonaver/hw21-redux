@@ -1,13 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createStore, combineReducers } from "redux";
+import { Provider } from "react-redux";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+function reducer(state = { postData: [] }, action) {
+  const newData = [...state.postData];
+
+  if (action.type === "ADD") {
+    newData.push(action.add_newPost);
+    return { postData: newData };
+  }
+  if (action.type === "DELETE") {
+    newData.splice(state.postData.indexOf(action.add_newPost), 1);
+    return { postData: newData };
+  }
+  if (action.type === "CHANGE") {
+    newData.splice(
+      state.postData.indexOf(action.add_newPost),
+      1,
+      action.add_newPost
+    );
+
+    return { postData: newData };
+  }
+
+  return state;
+}
+
+let store = createStore(reducer);
+store.subscribe(() => console.log(store.getState()));
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
