@@ -43,7 +43,7 @@ export const authors = [
   {
     name: "Dart Vayder",
     photoNick: DARTHVADER_IMAGE,
-    nickname: "@dart_vader2",
+    nickname: "@darth_vard",
   },
   {
     name: "Yoda",

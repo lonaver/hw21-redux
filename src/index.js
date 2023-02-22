@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createStore, combineReducers } from "redux";
+import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 function reducer(state = { postData: [] }, action) {
@@ -13,16 +13,11 @@ function reducer(state = { postData: [] }, action) {
     newData.push(action.add_newPost);
     return { postData: newData };
   }
-  if (action.type === "DELETE") {
-    newData.splice(state.postData.indexOf(action.add_newPost), 1);
-    return { postData: newData };
-  }
   if (action.type === "CHANGE") {
-    newData.splice(
-      state.postData.indexOf(action.add_newPost),
-      1,
-      action.add_newPost
+    const index = state.postData.findIndex(
+      (elem) => elem.author.nickname === action.add_newPost.author.nickname
     );
+    newData.splice(index, 1, action.add_newPost);
 
     return { postData: newData };
   }
